@@ -5,7 +5,6 @@
         ":dependencyDashboard",
         ":disableRateLimiting",
         "docker:enableMajor",
-        "docker:pinDigests",
         ":automergeDigest",
         ":enablePreCommit",
         "github>ishioni/renovate-config:commit-message",
