@@ -10,6 +10,15 @@
         ],
         "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
         "extractVersionTemplate": "{{#if versionTemplate}}{{{versionTemplate}}}{{else}}{{/if}}"
+      },
+      {
+        "description": ["Process various dependencies in YAML files for docker"],
+        "fileMatch": [".+\\.ya?ml$"],
+        "matchStrings": [
+          "# renovate-docker.*\\n.*?: (?<depName>[^:].*?):(?<currentValue>[^@].*?)[@\\n]+(?<currentDigest>sha256:[a-f0-9]+)?"
+        ],
+        "versioningTemplate": "docker",
+        "datasourceTemplate": "docker"
       }
     ]
   }
