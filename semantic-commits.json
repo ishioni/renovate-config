@@ -5,60 +5,47 @@
     ],
     "packageRules": [
         {
-            "matchUpdateTypes": [
-                "major"
-            ],
+            "matchUpdateTypes": ["major"],
             "semanticCommitType": "feat",
             "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:"
         },
         {
-            "matchUpdateTypes": [
-                "minor"
-            ],
+            "matchUpdateTypes": ["minor"],
             "semanticCommitType": "feat"
         },
         {
-            "matchUpdateTypes": [
-                "patch"
-            ],
+            "matchUpdateTypes": ["patch"],
             "semanticCommitType": "fix"
         },
         {
-            "matchDatasources": [
-                "docker"
-            ],
+            "matchDatasources": ["docker"],
             "semanticCommitScope": "docker-image"
         },
         {
-            "matchDatasources": [
-                "helm"
-            ],
+            "matchDatasources": ["helm"],
             "semanticCommitScope": "helm-chart"
         },
         {
-            "matchDatasources": [
-                "terraform-provider"
-            ],
+            "matchDatasources": [ "terraform-provider"],
             "semanticCommitScope": "terraform-provider"
         },
         {
-            "matchDatasources": [
-                "galaxy-collection"
-            ],
+            "matchDatasources": [ "galaxy-collection"],
             "semanticCommitScope": "ansible-collection"
         },
         {
-            "matchDatasources": [
-                "galaxy-role"
-            ],
+            "matchDatasources": ["galaxy-role"],
             "semanticCommitScope": "ansible-role"
         },
         {
-            "matchManagers": [
-                "github-actions"
-            ],
+            "matchManagers": [ "github-actions"],
             "semanticCommitType": "ci",
             "semanticCommitScope": "github-action"
+        },
+        {
+            "matchDatasources": ["custom.grafana-dashboards"],
+            "matchUpdateTypes": ["major"],
+            "commitMessagePrefix": "chore"
         }
     ]
 }
